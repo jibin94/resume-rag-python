@@ -81,3 +81,7 @@ Documents → TextLoader → RecursiveCharacterTextSplitter → GoogleGenerative
 2. Complete RAG pipeline implementation  
 3. Similarity vs MMR retriever experimentation
 4. Google Gemini API integration
+
+## Output Log Example
+
+![Single Resume Output](https://github.com/jibin94/resume-rag-python/blob/main/screenshot/single_resume1.png)
