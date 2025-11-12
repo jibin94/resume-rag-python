@@ -9,6 +9,86 @@ Complete implementation of a RAG (Retrieval-Augmented Generation) pipeline for r
 **Retriever Comparison**: Similarity vs MMR retrieval strategies  
 **Google Gemini Integration**: Uses gemini-2.5-flash and embedding-001  
 **Multi-document Support**: Process multiple resumes simultaneously  
+**Vector Search**: FAISS-powered similarity search for efficient retrieval
+
+## Workflow Overview
+
+The RAG pipeline follows a systematic approach to process and analyze resumes:
+
+### 1. Document Ingestion
+- Load resume text files from the `resumes/` directory
+- Support for multiple document formats and batch processing
+- Text preprocessing and cleaning
+
+### 2. Text Chunking
+- Split documents into manageable chunks using RecursiveCharacterTextSplitter
+- Maintains semantic coherence while ensuring optimal chunk sizes
+- Configurable chunk size and overlap parameters
+
+### 3. Embedding Generation
+- Convert text chunks into vector representations using Google's embedding-001 model
+- High-dimensional embeddings capture semantic meaning
+- Consistent embedding space for similarity calculations
+
+### 4. Vector Storage
+- Store embeddings in FAISS vector database for efficient retrieval
+- Index optimization for fast similarity search
+- Support for both similarity and MMR retrieval strategies
+
+### 5. Query Processing
+- Accept natural language questions about resume content
+- Retrieve relevant document chunks based on semantic similarity
+- Rank and filter results using different retrieval algorithms
+
+### 6. Answer Generation
+- Use Google Gemini 2.5 Flash to generate contextual responses
+- Combine retrieved chunks with user queries
+- Structured output using Pydantic schemas for consistent formatting
+
+## Dependencies
+
+The project uses the following key dependencies (see `requirements.txt`):
+
+### Core LangChain Components
+- **`langchain-google-genai`** (Latest)
+  - Provides Google Gemini AI integration for LangChain framework
+  - Includes ChatGoogleGenerativeAI for conversational AI
+  - GoogleGenerativeAIEmbeddings for text vectorization
+  - Handles API authentication and request management
+
+- **`langchain-community`** (Latest)
+  - Community-contributed LangChain components and integrations
+  - Additional document loaders, retrievers, and utilities
+  - Extended functionality beyond core LangChain features
+  - Support for various data sources and formats
+
+- **`langchain-text-splitters`** (Latest)
+  - Specialized text splitting utilities for document chunking
+  - RecursiveCharacterTextSplitter for intelligent text segmentation
+  - Maintains context while creating manageable chunk sizes
+  - Configurable splitting strategies and overlap handling
+
+### Vector Storage & Search
+- **`faiss-cpu`** (Latest)
+  - Facebook AI Similarity Search library for efficient vector operations
+  - CPU-optimized version for local development and deployment
+  - High-performance similarity search and clustering algorithms
+  - Supports various distance metrics and indexing strategies
+  - Memory-efficient storage and retrieval of high-dimensional vectors
+
+### Data Validation & Configuration
+- **`pydantic`** (Latest)
+  - Data validation and schema enforcement using Python type annotations
+  - Automatic parsing and validation of structured resume data
+  - Type safety and error handling for API responses
+  - JSON schema generation for consistent data formats
+  - Runtime validation of extracted resume information
+
+- **`python-dotenv`** (Latest)
+  - Load environment variables from .env files
+  - Secure API key management and configuration
+  - Development/production environment separation
+  - Simple configuration management without hardcoded secrets  
 
 ## Setup
 
@@ -57,8 +137,17 @@ answer = rag.answer_question("What skills does the candidate have?", "similarity
 ## Pipeline Architecture
 
 ```
-Documents → TextLoader → RecursiveCharacterTextSplitter → GoogleGenerativeAIEmbeddings → SimpleVectorStore → Retrievers → GoogleGenerativeAI
+Documents → TextLoader → RecursiveCharacterTextSplitter → GoogleGenerativeAIEmbeddings → FAISS VectorStore → Retrievers → GoogleGenerativeAI
 ```
+
+### Detailed Flow
+1. **Input**: Resume text files (.txt format)
+2. **Loading**: LangChain TextLoader reads documents
+3. **Splitting**: RecursiveCharacterTextSplitter creates semantic chunks
+4. **Embedding**: Google embedding-001 converts text to vectors
+5. **Storage**: FAISS stores vectors for efficient similarity search
+6. **Retrieval**: Similarity/MMR retrievers find relevant chunks
+7. **Generation**: Gemini 2.5 Flash generates structured responses
 
 ## Files
 
