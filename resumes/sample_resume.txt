@@ -1,0 +1,32 @@
+John Doe
+Email: john.doe@email.com
+Phone: (555) 123-4567
+
+SUMMARY
+Experienced software engineer with 5+ years in full-stack development, specializing in Python, JavaScript, and cloud technologies.
+
+TECHNICAL SKILLS
+- Programming Languages: Python, JavaScript, Java, SQL
+- Frameworks: Django, React, Node.js, Flask
+- Cloud Platforms: AWS, Google Cloud Platform
+- Databases: PostgreSQL, MongoDB, Redis
+- Tools: Docker, Kubernetes, Git, Jenkins
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer | Tech Solutions Inc. | 2021 - Present
+- Led development of microservices architecture serving 1M+ users
+- Implemented CI/CD pipelines reducing deployment time by 60%
+- Mentored junior developers and conducted code reviews
+- Designed and built RESTful APIs using Python and Django
+
+Software Engineer | StartupXYZ | 2019 - 2021
+- Developed full-stack web applications using React and Node.js
+- Optimized database queries improving application performance by 40%
+- Collaborated with cross-functional teams in Agile environment
+- Built automated testing suites with 90% code coverage
+
+EDUCATION
+Bachelor of Science in Computer Science | University of Technology | 2019
+- Relevant Coursework: Data Structures, Algorithms, Database Systems
+- GPA: 3.8/4.0

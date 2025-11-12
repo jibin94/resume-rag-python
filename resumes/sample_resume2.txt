@@ -1,0 +1,43 @@
+Sarah Johnson
+Email: sarah.johnson@techmail.com
+Phone: (555) 987-6543
+
+PROFESSIONAL SUMMARY
+Senior Data Scientist with 7+ years of experience in machine learning, data analysis, and AI model development. Expertise in Python, R, and cloud platforms.
+
+TECHNICAL SKILLS
+- Programming: Python, R, SQL, Scala, Java
+- ML/AI: TensorFlow, PyTorch, Scikit-learn, Keras
+- Cloud: AWS, Azure, Google Cloud Platform
+- Databases: PostgreSQL, MongoDB, Cassandra, Redis
+- Tools: Docker, Kubernetes, Apache Spark, Airflow
+
+WORK EXPERIENCE
+
+Lead Data Scientist | DataTech Solutions | 2020 - Present
+- Built ML models for predictive analytics serving 500K+ users
+- Implemented MLOps pipelines reducing model deployment time by 70%
+- Led team of 5 data scientists on customer segmentation project
+- Developed recommendation systems using collaborative filtering
+
+Data Scientist | AI Innovations Corp | 2018 - 2020
+- Created deep learning models for computer vision applications
+- Optimized data processing workflows improving efficiency by 50%
+- Collaborated with engineering teams on model productionization
+- Published 3 research papers on neural network architectures
+
+Junior Data Analyst | Analytics Plus | 2017 - 2018
+- Performed statistical analysis on large datasets using R and Python
+- Created interactive dashboards using Tableau and Power BI
+- Automated reporting processes saving 20 hours per week
+- Conducted A/B testing for product feature optimization
+
+EDUCATION
+Master of Science in Data Science | Stanford University | 2017
+- Specialization: Machine Learning and Statistical Modeling
+- Thesis: "Deep Learning Applications in Natural Language Processing"
+- GPA: 3.9/4.0
+
+Bachelor of Science in Mathematics | UC Berkeley | 2015
+- Minor in Computer Science
+- Relevant Coursework: Statistics, Linear Algebra, Algorithms
